@@ -24,20 +24,22 @@
                     >${currentTab['title']}
                   </li>`
         }).join('')}
+        </ul>
         
-      
-       
-        <div
+       <div
           data-content
         >
-        ${this._tabs[0]['content']}
+        Content block empty<br>
+        Nothing selected<br>
+        Try click one of headers<br>
         </div>    
-     
-        </ul>
        `
     }
 
     _setContent(selector){
+
+
+
         this._element.addEventListener('click', (event)=>{
             const targetElement = this._element.querySelector(`[data-element=${selector}]`),
                   contentBlock = this._element.querySelector(`[data-content]`);
