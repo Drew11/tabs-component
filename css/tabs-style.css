@@ -1,0 +1,33 @@
+
+*{
+    margin: 0;
+
+}
+li {
+    background-color: orange;
+}
+[data-element]{
+    color: royalblue;
+    float: left;
+    list-style: none;
+    border: 1px black solid;
+    border-radius: 3px;
+    width: 100px;
+    height: 30px;
+    background-color: grey;
+}
+
+[data-element]:hover{
+    cursor: pointer;
+}
+[data-content]{
+    width: 304px;
+    height: 128px;
+    border: 1px black solid;
+}
+
+.selected {
+    border: none;
+}
+
+
