@@ -9,11 +9,27 @@ let tabs = [
     { title: 'Tab 3', content: 'Some Lorem ipsum dolor sit amet, consetetur sadipscing elitr'},
 ];
 
+
+ //
+ // tabsComponent.subscribe('tab-selected', ({ title, content }) => {
+ //    console.log(`Tab ${ title } was selected \n ${content}`);
+ // });
+
+
+// setInterval(()=>{
+ //     console.log(tabsComponent.getCurrentTab())
+ // },3000);
 let tabsComponent = new Tabs({
     element: someEmptyDOMElement,
-    tabs: tabs,
 });
 
- tabsComponent.subscribe('tab-selected', ({ title, content }) => {
-    console.log(`Tab ${ title } was selected \n ${content}`);
- });
+let tabsElements = [...document.querySelectorAll('tabs')];
+
+tabsElements.forEach((el) => {
+    el.addEventListener('tab-selected', (event) => {
+        let { title } = event.detail;
+        console.log(title);
+    })
+});
+
+
